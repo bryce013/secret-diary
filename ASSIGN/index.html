@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secret Diary</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="bg" id="signUp">
+            <div class="main-block">
+                <form action="save.php" method="POST">
+                    <div class="info" >
+                        <h2 style="color: white;">Secret Diary - Register Here</h2>
+                        <input type="text" required name="Name" placeholder="Name">
+                        <input type="text" required name="Email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="password" required name="Password" placeholder="Password">           
+                        <button style="align-self: center;" type="submit" name="submit" value="submit" >Submit</button>
+                        <p style="margin-top: 7%; color: white; align-self: center;"><a href="#" id=clickLogIn> Login </a></p>
+                
+                    </div>          
+                  </form>
+            </div>            
+        </div>
+        <div class="bg" id="logIn">
+            <div class="main-block">
+                <form action="log.php" method="POST">
+                    <div class="info" >
+                        <h2 style="color: white;">Secret Diary - Login Here</h2>
+                        <input type="text" required name="Email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="password" required name="Password" placeholder="Password">           
+                        <button style="align-self: center;" type="submit" name="submit" value="submit" >Login</button>
+                    </div>          
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            $("#clickLogIn").click(function(){
+    
+                $("#signUp").toggle();
+                $("#logIn").toggle();
+    
+            })
+    
+        </script>
+    </body>
+</html>
